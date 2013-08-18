@@ -1,0 +1,166 @@
+body {
+	font: 100%/1.4 Arvo, Georgia, serif;
+	background: #bc97ff url(../img/background.jpg);
+	margin: 2em;
+}
+
+#wrapper {
+	background-color: white;
+	max-width: 30em;
+	padding: 2em 4em;
+	border: 0.3em solid black;
+	margin: 0 auto;
+	border-bottom-width: 5em;
+	position: relative;
+}
+
+h1 {
+	font: 200%/1.4 Vidaloka-Regular, Arvo, Georgia, serif;
+	text-align: center;
+	margin: 0;
+}
+
+h2 {
+	font-size: 125%;
+	margin: 0;
+}
+
+p { margin: 1em 0; }
+
+a {
+	color: #6d298a;
+	text-decoration: underline;
+}
+	a:hover { color: #9b4bbd; }
+
+ul {
+	margin: 1em 0;
+	padding: 0 0 0 1.3em;
+}
+
+.arrow {
+	height: 3em;
+	margin: 1.7em 0 2em 0;
+	background-color: black;
+	display: none;
+}
+	.arrow::after {
+		content: "";
+		position: absolute;
+		right: 4em;
+		margin-top: -1.5em;
+		border-top: 3em solid white;
+		border-bottom: 3em solid white;
+		border-left: 3em solid black;
+	}
+
+	.arrow.left { margin-top: 2em; }
+
+		.arrow.left::after {
+			right: auto;
+			border-left: 0;
+			border-right: 3em solid black;
+		}
+
+blockquote, #news {
+	background-color: #b6ffcb;
+	font-style: italic;
+	margin: 1em 0;
+	padding: 1em;
+	border: 0.3em solid black;
+}
+	blockquote p {
+		font-size: 90%;
+		margin: 0;
+	}
+		blockquote p + p { margin-top: 1em; }
+
+	blockquote a,
+	#news a {
+		color: #104d21;
+	}
+
+	blockquote a:hover,
+	#news a:hover {
+		color: black;
+	}
+
+#news {
+	max-width: 36em;
+	margin: 0 auto 1em auto;
+	font-style: normal;
+}
+
+.border-bottom-image {
+	width: 100%;
+	background-position: center top;
+	background-repeat: no-repeat;
+	border-bottom: 0.3em solid black;
+	margin: 0.5em 0 1.5em 0;
+}
+	.border-bottom-image.city {
+		background-image: url(../img/city.png);
+		height: 43px;
+	}
+
+	.border-bottom-image.cottage {
+		background-image: url(../img/cottage.png);
+		height: 52px;
+	}
+
+	.border-bottom-image.people {
+		background-image: url(../img/people.png);
+		height: 45px;
+	}
+
+#tower {
+	position: absolute;
+	right: 0;
+	bottom: -9px;
+}
+
+#footer {
+	text-align: center;
+	margin-top: 1em;
+}
+	#footer p {
+		margin: 0;
+		font-size: 90%;
+	}
+
+	#footer a {
+		color: black;
+	}
+
+@media screen and (min-width: 78em) {
+
+	blockquote {
+		position: absolute;
+		left: 36em;
+		width: 18em;
+		margin-top: -8.5em;
+	}
+
+	blockquote.left { left: -18.3em; }
+
+	.arrow { display: block; }
+
+}
+
+@media screen and (max-width: 30em) { /* Break point at #wrapper width. */
+
+	body { margin: 1em; }
+
+	/* Bottom padding to fit tower image. */
+	#wrapper { padding: 1em 1em 161px 1em; }
+
+	blockquote {
+		border-right: 0;
+		border-left: 0;
+		margin-right: -1em;
+		margin-left: -1em;
+	}
+
+	.border-bottom-image { margin-bottom: 1em; }
+
+}
