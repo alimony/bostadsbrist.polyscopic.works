@@ -14,17 +14,21 @@
 	if (window.location.hostname === 'alimony.github.io') {
 		window.location = 'https://bostadsbrist.polyscopic.works/';
 	}
-	if (window.location.hostname === 'bostadsbrist.polyscopic.works') {
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-40295156-1']);
-		_gaq.push(['_setSiteSpeedSampleRate', 100]);
-		_gaq.push(['_trackPageview']);
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	}
+	</script>
+	<script>
+	var _paq = window._paq = window._paq || [];
+	_paq.push(['trackPageView']);
+	_paq.push(['enableLinkTracking']);
+	(function() {
+		var u = 'https://analytics.polyscopic.works/';
+		_paq.push(['setTrackerUrl', u + 'matomo.php']);
+		_paq.push(['setSiteId', '7']);
+		var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+		g.type = 'text/javascript';
+		g.async = true;
+		g.src = u + 'matomo.js';
+		s.parentNode.insertBefore(g, s);
+	})();
 	</script>
 </head>
 <body>
